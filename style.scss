@@ -20,7 +20,7 @@ header{
     background-position: top;
     text-align: center;
     padding: 30px;
-
+    
     h1{
         font-size: $titleFont;
         color: $mainColor;
@@ -39,7 +39,9 @@ header{
     border-radius: 20px;
     box-shadow: 0px 2px 10px rgba($color: #3b3b3b, $alpha: 0.3), 2px 0px 10px rgba($color: #3b3b3b, $alpha: 0.5);
     z-index: 2;
-
+    top: -50%;
+    transform: translateY(50%);
+    
     //* Little 'how to use the site' 
     .info{
         padding: 20px 0px;
@@ -61,7 +63,7 @@ header{
 
         button{
             background-color: $secondColor;
-            padding: 10px;
+            padding: 15px;
             border-radius: 25px;
 
             &:hover{
@@ -79,4 +81,36 @@ header{
 footer{
     text-align: center;
     background-color: $thirdColor;
+}
+
+
+@media only screen and (max-width: 46.875em){
+
+    header{
+
+        h1{
+            font-size: $titleMobile;
+        }
+    }
+
+    .container{
+        top: 0%;
+        transform: translateY(0%);
+
+        .info{
+            font-size: $textMobile;
+        }
+
+        #forms{
+            input{
+                font-size: $inputMobile;
+            }
+            button{
+                font-size: $inputMobile;
+            }
+        }
+    }
+
+
+
 }
