@@ -26,7 +26,7 @@
 
             <!-- Guia de como usar -->
             <section>
-                <p id="info">
+                <p class="info">
                     Calcule a quantidade necessária de <span id="detail">
                         Cerveja, Carvão e Refrigerante,</span> para ter
                     um churrasco agradável 👌
@@ -40,7 +40,15 @@
                     <input type="number" id="Crianças" placeholder="Nº de crianças">
                     <input type="number" id="Tempo" placeholder="Duração (horas)">
                 </form>
-                <button> Calcular </button>
+                <button onclick="result()"> Calcular </button>
+            </section>
+
+            <!-- Resultado do calculo -->
+            <section id="ninja">
+                <h2 class="info">Serão necessários: </h2>
+                <p class="info">X gr de carne para cada pessoa</p>
+                <p class="info">X ml de cerveja para cada pessoa</p>
+                <p class="info">X ml de Refrigerante/água para cada pessoa</p>
             </section>
         </div>
     </main>
