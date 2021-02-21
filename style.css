@@ -1,1 +1,53 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+#detail {
+  color: rgba(255, 157, 0, 0.89);
+}
+
+main {
+  max-width: 1024px;
+  margin: auto;
+}
+
+main #info {
+  font-size: 1.3rem;
+}
+
+main #forms {
+  text-align: center;
+  display: flexbox;
+}
+
+main #forms input, main #forms button {
+  margin: 10px;
+  font-size: 1.1rem;
+  border-style: none;
+  background-color: #f3f2f2;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+main #forms button {
+  background-color: rgba(255, 157, 0, 0.89);
+  padding: 10px;
+}
+
+main #forms button:hover {
+  font-size: 1.2rem;
+  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=style.css.map */
