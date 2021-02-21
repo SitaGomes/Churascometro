@@ -6,8 +6,12 @@
     box-sizing: border-box;
 }
 
-body{
+main{
     background-color: $mainColor;
+    background-image: url(/Extra/eric-nopanen-3skLpaOBlMw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 header{
@@ -28,14 +32,15 @@ header{
     color: $secondColor;
 }
 
-main{
+.container{
     max-width: 800px;
     margin: auto;
     background-color: $thirdColor;
     border-radius: 20px;
     box-shadow: 0px 2px 10px rgba($color: #3b3b3b, $alpha: 0.1), 2px 0px 10px rgba($color: #747373, $alpha: 0.3);
+    z-index: 2;
 
-    //* Litle 'how to use the site' 
+    //* Little 'how to use the site' 
     #info{
         padding: 20px 0px;
         font-size: $textFont;
@@ -44,7 +49,6 @@ main{
 
     #forms{
         text-align: center;
-        display: flexbox;
         
         input, button{
             margin: 10px;
