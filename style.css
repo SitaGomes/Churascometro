@@ -5,12 +5,21 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: #f0f0f0;
+}
+
 header {
+  background-image: url("/Extra/volodymyr-hryshchenko-2-8vGz1joLk-unsplash.jpg");
+  background-size: cover;
+  background-position: top;
   text-align: center;
+  padding: 30px;
 }
 
 header h1 {
   font-size: 3rem;
+  color: #f0f0f0;
 }
 
 #detail {
@@ -18,12 +27,18 @@ header h1 {
 }
 
 main {
-  max-width: 1024px;
+  max-width: 800px;
   margin: auto;
+  background-color: rgba(221, 221, 221, 0.623);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 2px 10px rgba(59, 59, 59, 0.1), 2px 0px 10px rgba(116, 115, 115, 0.3);
+          box-shadow: 0px 2px 10px rgba(59, 59, 59, 0.1), 2px 0px 10px rgba(116, 115, 115, 0.3);
 }
 
 main #info {
+  padding: 20px 0px;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 main #forms {
@@ -35,7 +50,7 @@ main #forms input, main #forms button {
   margin: 10px;
   font-size: 1.1rem;
   border-style: none;
-  background-color: #f3f2f2;
+  background-color: #f0f0f0;
   padding: 5px;
   border-radius: 7px;
 }
@@ -43,11 +58,17 @@ main #forms input, main #forms button {
 main #forms button {
   background-color: rgba(255, 157, 0, 0.89);
   padding: 10px;
+  border-radius: 25px;
 }
 
 main #forms button:hover {
-  font-size: 1.2rem;
-  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+  font-size: 1.18rem;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(221, 221, 221, 0.623);
 }
 /*# sourceMappingURL=style.css.map */
