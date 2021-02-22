@@ -19,10 +19,10 @@ function result() {
 
     let meatB4 = 400
     let meatAfter = 650
-    let beerB4 = 400
-    let beerAfter = 650
-    let cokeB4 = 400
-    let cokeAfter = 650
+    let beerB4 = 1200
+    let beerAfter = 2000
+    let cokeB4 = 1000
+    let cokeAfter = 1500
 
     //* Final result variables
     let carne
@@ -30,28 +30,28 @@ function result() {
     let coke
 
     //! calculating the food, drinks 
+    if (time.value >= 6) {
+        carne = meatAfter * adultConvert
+        cerveja = beerAfter * adultConvert
+        coke = cokeAfter * adultConvert
+
+    } else {
+        carne = meatB4 * adultConvert
+        cerveja = beerB4 * adultConvert
+        coke = cokeB4 * adultConvert
+    }
+
     if (kidsConvert > 0) {
 
         if (time.value >= 6) {
-            carne = (meatAfter / 2) * kidsConvert
-            coke = (cokeAfter / 2) * kidsConvert
+            carne += (meatAfter / 2) * kidsConvert
+            coke += (cokeAfter / 2) * kidsConvert
 
         } else {
-            carne = (meatB4 / 2) * kidsConvert
-            coke = (cokeB4 / 2) * kidsConvert
+            carne += (meatB4 / 2) * kidsConvert
+            coke += (cokeB4 / 2) * kidsConvert
 
         }
-    }
-
-    if (time.value >= 6) {
-        carne = + meatAfter * adultConvert
-        cerveja = beerAfter * adultConvert
-        coke = + cokeAfter * adultConvert
-
-    } else {
-        carne = + meatB4 * adultConvert
-        cerveja = beerB4 * adultConvert
-        coke = + cokeB4 * adultConvert
     }
 
 
