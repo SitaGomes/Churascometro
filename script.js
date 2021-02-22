@@ -12,10 +12,34 @@ function result() {
     let kids = document.querySelector('#kid')
     let time = document.querySelector('#time')
     let hidden = document.querySelector('#ninja')
-    hidden.style.display = 'block'
 
-    if (hidden.style.display == 'none') {
+    let adultConvert = adult.value
+    let timeConvert = +time.value
+    let kidsConvert = +kids.value
 
+
+    //! 
+    if (time.value >= 6) {
+        var carne = 650 * adultConvert
+        var cerveja = 2000 * adultConvert
+        var coke = 1500 * adultConvert
+
+    } else {
+        carne = 400 * adultConvert
+        cerveja = 1200 * adultConvert
+        coke = 1000 * adultConvert
+
+    }
+
+    var screen = document.querySelector('#product')
+
+    if (hidden.style.display === 'block') {
+
+        hidden.style.display = 'none'
+    } else {
+        hidden.style.display = 'block'
+
+        screen.innerText = `${carne}gr de carne, ${cerveja}ml de cerveja, ${coke}ml de refrigerante/água`
     }
 
 
