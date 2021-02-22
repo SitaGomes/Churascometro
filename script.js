@@ -15,7 +15,7 @@ function result() {
 
     //* Grabbing only the value of the inputs
     let adultConvert = adult.value
-    let kidsConvert = kids.value //! One kid eats half 
+    let kidsConvert = kids.value
 
     let meatB4 = 400
     let meatAfter = 650
@@ -25,11 +25,9 @@ function result() {
     let cokeAfter = 1500
 
     //* Final result variables
-    let carne
-    let cerveja
-    let coke
+    let carne, cerveja, coke
 
-    //! calculating the food, drinks 
+    //! Calculating the food, drinks 
     if (time.value >= 6) {
         carne = meatAfter * adultConvert
         cerveja = beerAfter * adultConvert
@@ -43,6 +41,7 @@ function result() {
 
     if (kidsConvert > 0) {
 
+        //! One kid eats half 
         if (time.value >= 6) {
             carne += (meatAfter / 2) * kidsConvert
             coke += (cokeAfter / 2) * kidsConvert
@@ -63,8 +62,14 @@ function result() {
     } else {
         hidden.style.display = 'block'
 
-        screen.innerText = `${carne}gr de carne, ${cerveja}ml de cerveja, ${coke}ml de refrigerante/água`
-    }
 
+        if (adultConvert < 0 || kidsConvert < 0) {
+            return screen.innerText = 'Valores Inválidos'
+        } else {
+
+            return screen.innerText = `${carne}gr de Carne, ${cerveja}ml de Cerveja, ${coke}ml de Refrigerante/Água`
+        }
+
+    }
 
 }
