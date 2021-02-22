@@ -6,26 +6,26 @@ Refrigerante/água - 1000ml por pessoa >+ 6 horas 1500ml
 
 Crianças valem por 0,5
 */
+let adult = document.querySelector('#adult')
+let kids = document.querySelector('#kid')
+let time = document.querySelector('#time')
+let hidden = document.querySelector('#ninja')
+
+//* Grabbing only the value of the inputs
+let adultConvert = adult.value
+let kidsConvert = kids.value
+
+let meatB4 = 400
+let meatAfter = 650
+let beerB4 = 1200
+let beerAfter = 2000
+let cokeB4 = 1000
+let cokeAfter = 1500
+
+//* Final result variables
+let carne, cerveja, coke
 
 function result() {
-    let adult = document.querySelector('#adult')
-    let kids = document.querySelector('#kid')
-    let time = document.querySelector('#time')
-    let hidden = document.querySelector('#ninja')
-
-    //* Grabbing only the value of the inputs
-    let adultConvert = adult.value
-    let kidsConvert = kids.value
-
-    let meatB4 = 400
-    let meatAfter = 650
-    let beerB4 = 1200
-    let beerAfter = 2000
-    let cokeB4 = 1000
-    let cokeAfter = 1500
-
-    //* Final result variables
-    let carne, cerveja, coke
 
     //! Calculating the food, drinks 
     if (time.value >= 6) {
@@ -53,7 +53,6 @@ function result() {
         }
     }
 
-
     var screen = document.querySelector('#product')
 
     if (hidden.style.display === 'block') {
@@ -62,14 +61,11 @@ function result() {
     } else {
         hidden.style.display = 'block'
 
-
         if (adultConvert < 0 || kidsConvert < 0) {
             return screen.innerText = 'Valores Inválidos'
         } else {
 
             return screen.innerText = `${carne}gr de Carne, ${cerveja}ml de Cerveja, ${coke}ml de Refrigerante/Água`
         }
-
     }
-
 }
