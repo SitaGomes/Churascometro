@@ -36,11 +36,21 @@ header{
     margin-bottom: 10px;
     max-width: 500px;
     margin: auto;
-    
 
+    &:hover{
+        box-shadow: 0px 3px 5px rgba($color: #000000, $alpha: 0.2), 3px 0px 5px rgba($color: #000000, $alpha: 0.2);
+        font-size: $textFont + 0.01rem;
+    }
+
+    border-radius: 20px;
+    
     .icon{
         max-width: 25px;
         transform: translateY(5px);
+        
+        &:hover{
+            color: $mainColor
+        }
     }
     
     #male-icon{
@@ -75,6 +85,7 @@ header{
             background-color: $mainColor;
             padding: 5px;
             border-radius: 7px;
+
         }
 
         button{
@@ -83,8 +94,8 @@ header{
             border-radius: 25px;
 
             &:hover{
-                font-size: $inputFont + .08rem;
-                box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.2), 0px 0px 5px rgba($color: #000000, $alpha: 0.2);
+                box-shadow: 0px 3px 5px rgba($color: #000000, $alpha: 0.2), 3px 0px 5px rgba($color: #000000, $alpha: 0.2);
+                cursor: pointer;
             }
         }
     }
