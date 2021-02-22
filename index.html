@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Churrascômetro</title>
 
-    <link rel="icon" href="/Extra/drumstick-bite-solid.svg">
+    <link rel="icon" href="/Extra/SVG/drumstick-bite-solid.svg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -28,16 +28,25 @@
                 <p class="info">
                     Calcule a quantidade necessária de <span id="detail">
                         Cerveja, Carvão e Refrigerante,</span> para ter
-                    um churrasco agradável 👌
+                    um churrasco doara!
                 </p>
             </section>
             <br>
             <!-- Os formulários -->
             <section id="forms">
                 <form>
-                    <input type="number" id="adult" placeholder="Nº de Adultos">
-                    <input type="number" id="kid" placeholder="Nº de crianças">
-                    <input type="number" id="time" placeholder="Duração (horas)">
+                    <div class="inputs-icon">
+                        <img id="male-icon" alt="Male" srcset="/Extra/SVG/male-solid.svg">
+                        <input type="number" id="adult" value="" placeholder="Nº de Adultos">
+                    </div>
+                    <div class="inputs-icon">
+                        <img class="icon" alt="" srcset="/Extra/SVG/child-solid.svg">
+                        <input type="number" id="kid" placeholder="Nº de crianças">
+                    </div>
+                    <div class="inputs-icon">
+                        <img class='icon' alt="" srcset="/Extra/SVG/clock-solid.svg">
+                        <input type="number" id="time" placeholder="Duração (horas)">
+                    </div>
                 </form>
                 <button onclick="result()"> Calcular </button>
             </section>

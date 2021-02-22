@@ -30,6 +30,24 @@ header h1 {
   color: rgba(255, 157, 0, 0.89);
 }
 
+.inputs-icon {
+  margin-bottom: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.inputs-icon .icon {
+  max-width: 25px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.inputs-icon #male-icon {
+  max-width: 15px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
 .container {
   max-width: 800px;
   margin: auto;

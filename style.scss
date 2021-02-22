@@ -32,6 +32,24 @@ header{
     color: $secondColor;
 }
 
+.inputs-icon{
+    margin-bottom: 10px;
+    max-width: 500px;
+    margin: auto;
+    
+
+    .icon{
+        max-width: 25px;
+        transform: translateY(5px);
+    }
+    
+    #male-icon{
+        max-width: 15px;
+        transform: translateY(5px);
+        
+    }
+}
+
 .container{
     max-width: 800px;
     margin: auto;
