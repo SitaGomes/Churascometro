@@ -5,25 +5,21 @@
           box-sizing: border-box;
 }
 
+body {
+  background-image: url(/Extra/Food.png);
+  background-size: contain;
+}
+
 main {
-  background-color: #f0f0f0;
-  background-image: url(/Extra/eric-nopanen-3skLpaOBlMw-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  height: 50vh;
 }
 
 header {
-  background-image: url("/Extra/volodymyr-hryshchenko-2-8vGz1joLk-unsplash.jpg");
+  background-image: url(/Extra/pexels-skitterphoto-1105325.jpg);
   background-size: cover;
-  background-position: top;
-  text-align: center;
-  padding: 30px;
-}
-
-header h1 {
-  font-size: 5rem;
-  color: #f0f0f0;
+  background-position: center;
+  height: 50vh;
+  border-radius: 0 0 4rem 4rem;
 }
 
 #detail {
@@ -49,24 +45,29 @@ header h1 {
           transform: translateY(5px);
 }
 
-.inputs-icon .icon:hover {
-  color: #f0f0f0;
-}
-
 .inputs-icon #male-icon {
   max-width: 15px;
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
 }
 
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: rgba(255, 157, 0, 0.89);
+}
+
 .container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   max-width: 800px;
-  margin: auto;
-  background-color: rgba(221, 221, 221, 0.815);
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 2px 10px rgba(59, 59, 59, 0.3), 2px 0px 10px rgba(59, 59, 59, 0.5);
-          box-shadow: 0px 2px 10px rgba(59, 59, 59, 0.3), 2px 0px 10px rgba(59, 59, 59, 0.5);
-  z-index: 2;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 7px rgba(59, 59, 59, 0.3), 2px 0px 5px rgba(59, 59, 59, 0.5);
+          box-shadow: 0px 2px 7px rgba(59, 59, 59, 0.3), 2px 0px 5px rgba(59, 59, 59, 0.5);
+  background-color: #dddddded;
 }
 
 .container .info {
@@ -115,27 +116,26 @@ header h1 {
 
 footer {
   text-align: center;
-  background-color: rgba(221, 221, 221, 0.815);
 }
 
 @media only screen and (max-width: 46.875em) {
-  header h1 {
-    font-size: 2.4rem;
+  main {
+    height: 90vh;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .container {
+    width: 70%;
   }
   .container .info {
     font-size: 1.7rem;
   }
   .container #forms input {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .container #forms button {
-    font-size: 1.4rem;
-  }
-}
-
-@media only screen and (max-height: 43.75em) {
-  main {
-    height: 150vh;
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
