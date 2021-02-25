@@ -6,8 +6,8 @@
 }
 
 body {
-  background-image: url(/Extra/Food.png);
-  background-size: contain;
+  background-image: url(/Extra/Foods.png);
+  background-position: center;
 }
 
 main {
@@ -103,6 +103,7 @@ h1 {
 
 #ninja {
   display: none;
+  text-align: center;
 }
 
 #ninja h2 {
@@ -112,10 +113,6 @@ h1 {
 #ninja p {
   padding-top: 3px;
   font-size: 2rem;
-}
-
-footer {
-  text-align: center;
 }
 
 @media only screen and (max-width: 46.875em) {

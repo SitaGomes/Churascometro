@@ -6,66 +6,76 @@ Refrigerante/água - 1000ml por pessoa >+ 6 horas 1500ml
 
 Crianças valem por 0,5
 */
-let adult = document.querySelector('#adult')
-let kids = document.querySelector('#kid')
+let adultRaw = document.querySelector('#adult')
+let kidsRaw = document.querySelector('#kid')
 let time = document.querySelector('#time')
-let hidden = document.querySelector('#ninja')
+
+
+let pCarne = document.querySelector('#pCarne')
+let pCerveja = document.querySelector('#pCerveja')
+let pRefri = document.querySelector('#pRefri')
+
 
 //* Grabbing only the value of the inputs
-let adultConvert = adult.value
-let kidsConvert = kids.value
+let adult = adultRaw.value
+let kids = kidsRaw.value
 
-let meatB4 = 400
-let meatAfter = 650
-let beerB4 = 1200
-let beerAfter = 2000
-let cokeB4 = 1000
-let cokeAfter = 1500
+const foodB4 = {
+    meat: 400,
+    beer: 1200,
+    refri: 1000
+}
+
+//* Cost after 6 hours
+const foodAfter = {
+    meat: 650,
+    beer: 2000,
+    refri: 1500
+}
 
 //* Final result variables
-let carne, cerveja, coke
+let carne, cerveja, refri
 
-function result() {
+function show() {
+    let hidden = document.querySelector('#ninja')
 
-    //! Calculating the food, drinks 
-    if (time.value >= 6) {
-        carne = meatAfter * adultConvert
-        cerveja = beerAfter * adultConvert
-        coke = cokeAfter * adultConvert
-
-    } else {
-        carne = meatB4 * adultConvert
-        cerveja = beerB4 * adultConvert
-        coke = cokeB4 * adultConvert
-    }
-
-    if (kidsConvert > 0) {
-
-        //! One kid eats half 
-        if (time.value >= 6) {
-            carne += (meatAfter / 2) * kidsConvert
-            coke += (cokeAfter / 2) * kidsConvert
-
-        } else {
-            carne += (meatB4 / 2) * kidsConvert
-            coke += (cokeB4 / 2) * kidsConvert
-
-        }
-    }
-
-    var screen = document.querySelector('#product')
-
-    if (hidden.style.display === 'block') {
-
-        hidden.style.display = 'none'
-    } else {
+    if (hidden.style.display === 'none') {
         hidden.style.display = 'block'
 
-        if (adultConvert < 0 || kidsConvert < 0) {
-            return screen.innerText = 'Valores Inválidos'
-        } else {
+        pCarne.textContent = `${kids}`
 
-            return screen.innerText = `${carne}gr de Carne, ${cerveja}ml de Cerveja, ${coke}ml de Refrigerante/Água`
-        }
+    } else {
+        hidden.style.display = 'none'
     }
+
+}
+
+
+
+
+function makeCarne() {
+    if (time.value >= 6) {
+        carne = foodAfter.meat * adult + (foodAfter.meat / 2 * kids)
+    } else {
+        carne = foodB4.meat * adult + (foodB4.meat / 2 * kids)
+    }
+    return carne
+}
+
+function makeCerveja() {
+    if (time.value >= 6) {
+        return cerveja = foodAfter.beer * adult
+    } else {
+        cerveja = foodB4.beer * adult
+    }
+    return cerveja
+}
+
+function makeRefri() {
+    if (time.value >= 6) {
+        refri = foodAfter.coke * adult + (foodAfter.coke / 2 * kids)
+    } else {
+        refri = foodB4.coke * adult + (foodB4.coke / 2 * kids)
+    }
+    return refri
 }

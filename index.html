@@ -46,21 +46,19 @@
                         <input type="number" id="time" placeholder="Duração (horas)">
                     </div>
                 </form>
-                <button onclick="result()"> Calcular </button>
+                <button onclick="show()"> Calcular </button>
             </section>
 
             <!-- Resultado do calculo -->
-            <section class="info" id="ninja">
+            <section id="ninja">
                 <h2>Serão necessários: </h2>
-                <p id="product">
-                    X gr de carne,
-                    X ml de cerveja e
-                    X ml de Refrigerante/água para cada pessoa.
-                </p>
+                <p id="pCarne"></p>
+                <p id="pCeveja"></p>
+                <p id="pRefri"></p>
             </section>
         </div>
+        <script src="script.js"></script>
     </main>
-    <script src="script.js"></script>
 </body>
 
 </html>
