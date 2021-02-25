@@ -106,13 +106,13 @@ h1 {
   text-align: center;
 }
 
-#ninja h2 {
-  font-size: 2rem;
-}
-
 #ninja p {
   padding-top: 3px;
   font-size: 2rem;
+}
+
+#ninja img {
+  max-width: 25px;
 }
 
 @media only screen and (max-width: 46.875em) {
@@ -133,6 +133,27 @@ h1 {
   }
   .container #forms button {
     font-size: 1rem;
+  }
+  #ninja p {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 17.5em) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    width: 70%;
+  }
+  .container .info {
+    font-size: 1.5rem;
+  }
+  .container #forms input {
+    font-size: 0.8rem;
+  }
+  #ninja p {
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -34,19 +34,16 @@ header{
     margin-bottom: 10px;
     max-width: 500px;
     margin: auto;
+    border-radius: 20px;
     
     &:hover{
         box-shadow: 0px 3px 5px rgba($color: #000000, $alpha: 0.2), 3px 0px 5px rgba($color: #000000, $alpha: 0.2);
         font-size: $textFont + 0.01rem;
     }
     
-    border-radius: 20px;
-    
     .icon{
         max-width: 25px;
-        transform: translateY(5px);
-        
-        
+        transform: translateY(5px);       
     }
     
     #male-icon{
@@ -55,6 +52,7 @@ header{
         
     }
 }
+
 
 
 //*Churrascometro title
@@ -80,7 +78,7 @@ h1{
         font-size: $textFont;
         text-align: center;
     }
-
+    
     #forms{
         text-align: center;
         
@@ -91,14 +89,14 @@ h1{
             background-color: $inputsColor;
             padding: 5px;
             border-radius: 7px;
-
+            
         }
-
+        
         button{
             background-color: $secondColor;
             padding: 15px;
             border-radius: 25px;
-
+            
             &:hover{
                 box-shadow: 0px 3px 5px rgba($color: #000000, $alpha: 0.2), 3px 0px 5px rgba($color: #000000, $alpha: 0.2);
                 cursor: pointer;
@@ -110,17 +108,19 @@ h1{
 #ninja{
     display: none;
     text-align: center;
-
-    h2{
-        font-size: $textFont;
-    }
+    
     p{
         padding-top: 3px;
         font-size: $textFont;
     }
+    
+    img{
+        max-width: 25px;
+    }
+    
 }
 
-
+//*750px
 @media only screen and (max-width: 46.875em){
 
     main{
@@ -147,4 +147,40 @@ h1{
             }
         }
     }
+
+    #ninja{
+        p{
+            font-size: $textMobile;
+        }
+    }
+}
+
+//*Galaxy fold lol
+@media only screen and (max-width: 17.5em){
+
+    h1{
+        font-size: $titleMobile - 0.3rem;
+    }
+
+    .container{
+        width: 70%;
+
+        .info{
+            font-size: $textMobile - 0.2rem;
+        }
+
+        #forms{
+            input{
+                font-size: $inputMobile - 0.2rem;
+            }
+        }
+    }
+
+    #ninja{
+        p{
+            font-size: $textMobile - 0.2rem;
+        }
+    }
+
+
 }

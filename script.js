@@ -6,31 +6,29 @@ Refrigerante/água - 1000ml por pessoa >+ 6 horas 1500ml
 
 Crianças valem por 0,5
 */
-let adultRaw = document.querySelector('#adult')
-let kidsRaw = document.querySelector('#kid')
-let time = document.querySelector('#time')
+const adult = document.querySelector('#adult')
+const kids = document.querySelector('#kid')
+const time = document.querySelector('#time')
 
 
-let pCarne = document.querySelector('#pCarne')
-let pCerveja = document.querySelector('#pCerveja')
-let pRefri = document.querySelector('#pRefri')
 
+const pCarne = document.querySelector('#pCarne')
+const pCerveja = document.querySelector('#pCerveja')
+const pRefri = document.querySelector('#pRefri')
 
-//* Grabbing only the value of the inputs
-let adult = adultRaw.value
-let kids = kidsRaw.value
 
 const foodB4 = {
     meat: 400,
     beer: 1200,
-    refri: 1000
+    coke: 1000
 }
+
 
 //* Cost after 6 hours
 const foodAfter = {
     meat: 650,
     beer: 2000,
-    refri: 1500
+    coke: 1500
 }
 
 //* Final result variables
@@ -42,7 +40,11 @@ function show() {
     if (hidden.style.display === 'none') {
         hidden.style.display = 'block'
 
-        pCarne.textContent = `${kids}`
+        pCarne.innerText = `${makeCarne() / 1000}kg de carne`
+
+        pCerveja.innerText = `${Math.ceil(makeCerveja() / 350)} latas de cerveja`
+
+        pRefri.innerText = `${makeRefri() / 2000} Pet's de 2l de refrigerante/água`
 
     } else {
         hidden.style.display = 'none'
@@ -51,31 +53,29 @@ function show() {
 }
 
 
-
-
 function makeCarne() {
     if (time.value >= 6) {
-        carne = foodAfter.meat * adult + (foodAfter.meat / 2 * kids)
+        carne = foodAfter.meat * adult.value + (foodAfter.meat / 2 * kids.value)
     } else {
-        carne = foodB4.meat * adult + (foodB4.meat / 2 * kids)
+        carne = foodB4.meat * adult.value + (foodB4.meat / 2 * kids.value)
     }
     return carne
 }
 
 function makeCerveja() {
     if (time.value >= 6) {
-        return cerveja = foodAfter.beer * adult
+        cerveja = foodAfter.beer * adult.value
     } else {
-        cerveja = foodB4.beer * adult
+        cerveja = foodB4.beer * adult.value
     }
     return cerveja
 }
 
 function makeRefri() {
     if (time.value >= 6) {
-        refri = foodAfter.coke * adult + (foodAfter.coke / 2 * kids)
+        refri = foodAfter.coke * adult.value + (foodAfter.coke / 2 * kids.value)
     } else {
-        refri = foodB4.coke * adult + (foodB4.coke / 2 * kids)
+        refri = foodB4.coke * adult.value + (foodB4.coke / 2 * kids.value)
     }
     return refri
 }
